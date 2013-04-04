@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Security.Authentication;
 
-namespace ConsoleSample
+namespace HerokuDotNet
 {
 	public class OAuth
 	{

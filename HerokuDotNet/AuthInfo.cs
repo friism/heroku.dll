@@ -1,5 +1,5 @@
 ﻿
-namespace ConsoleSample
+namespace HerokuDotNet
 {
 	public class AuthInfo
 	{
