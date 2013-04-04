@@ -6,9 +6,9 @@ using System.Linq;
 using System.Net;
 using System.Security.Authentication;
 
-namespace HerokuDotNet
+namespace HerokuDotNet.OAuth
 {
-	public class OAuth
+	public class OAuthHelper
 	{
 		private const string BaseUrl = "https://id.heroku.com/";
 
