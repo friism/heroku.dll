@@ -1,9 +1,9 @@
-﻿using HerokuDotNet.OAuth;
+﻿using Heroku.OAuth;
 using System;
 using System.Configuration;
 using System.Text;
 
-namespace HerokuDotNet
+namespace Heroku
 {
 	public static class ClientHelper
 	{

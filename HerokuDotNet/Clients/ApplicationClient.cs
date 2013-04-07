@@ -1,7 +1,7 @@
-﻿using HerokuDotNet.Model;
+﻿using Heroku.Model;
 using System.Collections.Generic;
 
-namespace HerokuDotNet.Clients
+namespace Heroku.Clients
 {
 	public class ApplicationClient : ResourceClient<Application>
 	{

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace HerokuDotNet.Model
+namespace Heroku.Model
 {
 	public class DomainResource : IdentifiableResourceBase
 	{

@@ -1,4 +1,4 @@
-﻿using HerokuDotNet;
+﻿using Heroku;
 using System;
 
 namespace ConsoleSample

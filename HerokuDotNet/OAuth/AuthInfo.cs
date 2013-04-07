@@ -1,5 +1,5 @@
 ﻿
-namespace HerokuDotNet.OAuth
+namespace Heroku.OAuth
 {
 	public class AuthInfo
 	{

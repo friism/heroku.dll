@@ -1,7 +1,7 @@
-﻿using HerokuDotNet.Model;
+﻿using Heroku.Model;
 using System.Collections.Generic;
 
-namespace HerokuDotNet.Clients
+namespace Heroku.Clients
 {
 	// TODO: Consider implementing `Delete` convenience method
 	public class ConfigurationVariableClient : ResourceClient<Account>

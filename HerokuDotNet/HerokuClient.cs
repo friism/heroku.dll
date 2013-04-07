@@ -1,6 +1,6 @@
-﻿using HerokuDotNet.Clients;
+﻿using Heroku.Clients;
 
-namespace HerokuDotNet
+namespace Heroku
 {
 	public class HerokuClient
 	{

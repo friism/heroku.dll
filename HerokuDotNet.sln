@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HerokuDotNet", "HerokuDotNet\HerokuDotNet.csproj", "{CC814044-1B02-4E9D-AFF2-B9BD4BC0DA61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heroku", "HerokuDotNet\Heroku.csproj", "{CC814044-1B02-4E9D-AFF2-B9BD4BC0DA61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSample", "ConsoleSample\ConsoleSample.csproj", "{5DF60781-193B-4791-A53B-078F9AC19DF2}"
 EndProject

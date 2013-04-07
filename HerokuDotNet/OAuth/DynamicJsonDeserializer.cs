@@ -2,7 +2,7 @@
 using RestSharp;
 using RestSharp.Deserializers;
 
-namespace HerokuDotNet.OAuth
+namespace Heroku.OAuth
 {
 	public class DynamicJsonDeserializer : IDeserializer
 	{

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HerokuDotNet.Model
+namespace Heroku.Model
 {
 	public abstract class UpdatableResourceBase : IdentifiableResourceBase
 	{

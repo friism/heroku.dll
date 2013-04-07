@@ -91,9 +91,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HerokuDotNet\HerokuDotNet.csproj">
+    <ProjectReference Include="..\HerokuDotNet\Heroku.csproj">
       <Project>{cc814044-1b02-4e9d-aff2-b9bd4bc0da61}</Project>
-      <Name>HerokuDotNet</Name>
+      <Name>Heroku</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

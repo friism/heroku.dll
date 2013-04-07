@@ -1,5 +1,5 @@
 ﻿
-namespace HerokuDotNet.Model
+namespace Heroku.Model
 {
 	public class Key : IdentifiableResourceBase
 	{

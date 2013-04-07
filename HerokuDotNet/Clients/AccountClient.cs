@@ -1,6 +1,6 @@
-﻿using HerokuDotNet.Model;
+﻿using Heroku.Model;
 
-namespace HerokuDotNet.Clients
+namespace Heroku.Clients
 {
 	public class AccountClient : ResourceClient<Account>
 	{

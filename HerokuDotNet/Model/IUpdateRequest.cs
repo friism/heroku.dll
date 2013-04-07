@@ -1,5 +1,5 @@
 ﻿
-namespace HerokuDotNet.Model
+namespace Heroku.Model
 {
 	public interface IUpdateRequest
 	{

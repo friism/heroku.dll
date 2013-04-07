@@ -1,7 +1,7 @@
-﻿using HerokuDotNet.Model;
+﻿using Heroku.Model;
 using System.Collections.Generic;
 
-namespace HerokuDotNet
+namespace Heroku
 {
 	public abstract class ResourceClient<TResource> where TResource : ResourceBase
 	{

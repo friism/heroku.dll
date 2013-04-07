@@ -7,7 +7,7 @@
     <ProjectGuid>{CC814044-1B02-4E9D-AFF2-B9BD4BC0DA61}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HerokuDotNet</RootNamespace>
+    <RootNamespace>Heroku</RootNamespace>
     <AssemblyName>HerokuDotNet</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

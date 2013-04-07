@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Security.Authentication;
 
-namespace HerokuDotNet.OAuth
+namespace Heroku.OAuth
 {
 	// REMARK: This code is taken from the AppHarbor SDK, https://github.com/appharbor/AppHarbor.NET/blob/master/AppHarbor.Sdk/AppHarborClient.Auth.cs
 	public class OAuthHelper
