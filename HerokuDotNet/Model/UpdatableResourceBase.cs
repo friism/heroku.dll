@@ -2,7 +2,7 @@
 
 namespace HerokuDotNet.Model
 {
-	public abstract class UpdatableResourceBase : ResourceBase
+	public abstract class UpdatableResourceBase : IdentifiableResourceBase
 	{
 		public DateTime UpdatedAt { get; set; }
 	}

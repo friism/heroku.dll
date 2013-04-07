@@ -8,6 +8,7 @@ using System.Security.Authentication;
 
 namespace HerokuDotNet.OAuth
 {
+	// REMARK: This code is taken from the AppHarbor SDK, https://github.com/appharbor/AppHarbor.NET/blob/master/AppHarbor.Sdk/AppHarborClient.Auth.cs
 	public class OAuthHelper
 	{
 		private const string BaseUrl = "https://id.heroku.com/";
@@ -30,28 +31,6 @@ namespace HerokuDotNet.OAuth
 			}
 
 			return new AuthInfo(response.Data.access_token.ToString(), response.Data.token_type.ToString());
-
-			// parse the returned value
-			var values = response.Content.Split('&')
-				.Select(x => x.Split(new[] { '=' }, count: 2))
-				.ToArray();
-
-			// if format is: error=unauthorized_client
-			if (values.Length == 1)
-			{
-				var errorMessage = values[0][1];
-				throw new ApplicationException(string.Format("Error: {0}", values[0][1]));
-			}
-
-			// if format is: access_token=:accesstoken&token_type=:tokentype
-			if (values.Length == 2 && values.All(x => x.Length == 2))
-			{
-				var authInfoElements = values.ToDictionary(x => x[0], x => x[1]);
-
-				return new AuthInfo(authInfoElements["access_token"], authInfoElements["token_type"]);
-			}
-
-			return null;
 		}
 
 		/// <summary>
@@ -62,9 +41,8 @@ namespace HerokuDotNet.OAuth
 		/// This command will start a webserver on localhost to listen for the authorization code. The webserver is
 		/// listining on the following url: <code>http://+:80/Temporary_Listen_Addresses/</code>
 		/// </remarks>
-		/// <param name="clientId">The client ID that can be obtained created at http://appharbor.com/clients. The callback URL
-		/// for the client must be set to <code>http://localhost:80/Temporary_Listen_Addresses/</code>. May not be null.</param>
-		/// <param name="clientSecret">The client secret, which is obtained in the same way as the client ID. May not be null.</param>
+		/// <param name="clientId">The client ID</param>
+		/// <param name="clientSecret">The client secret</param>
 		/// <param name="timeout">Timeout, if the user has not authorized your application within the given timeout then a
 		/// <see cref="TimeoutException"/> is thrown and the operation is cancelled.</param>
 		/// <returns>If the operation is successful a valid <see cref="AuthInfo"/> is returned.</returns>

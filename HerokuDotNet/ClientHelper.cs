@@ -1,5 +1,4 @@
 ﻿using HerokuDotNet.OAuth;
-using ServiceStack.ServiceClient.Web;
 using System;
 using System.Configuration;
 using System.Text;
@@ -8,9 +7,9 @@ namespace HerokuDotNet
 {
 	public static class ClientHelper
 	{
-		public static ServiceClientBase GetClient()
+		public static HerokuServiceClient GetClient()
 		{
-			var client = new HerokuServiceClient("https://api.heroku.com/");
+			var client = new HerokuServiceClient();
 			client.Headers.Add("Authorization", GetAuthorizationHeaderValue());
 
 			return client;

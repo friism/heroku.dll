@@ -5,10 +5,12 @@ namespace HerokuDotNet
 {
 	public class HerokuServiceClient : JsonServiceClient
 	{
-		public HerokuServiceClient(string baseUri)
-			: base(baseUri)
+		public HerokuServiceClient()
+			: base("https://api.heroku.com/")
 		{
 			JsConfig.PropertyConvention = JsonPropertyConvention.Lenient;
+			JsConfig.EmitLowercaseUnderscoreNames = true;
+			LocalHttpWebRequestFilter = request => request.UserAgent = "heroku.dll";
 		}
 
 		public override string Accept
