@@ -1,5 +1,4 @@
-﻿
-namespace Heroku.Model
+﻿namespace Heroku.Model
 {
 	public class Formation : UpdatableResourceBase
 	{

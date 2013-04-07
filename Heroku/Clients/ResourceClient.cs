@@ -5,9 +5,9 @@ namespace Heroku
 {
 	public abstract class ResourceClient<TResource> where TResource : ResourceBase
 	{
-		private string _path;
+		private readonly string _path;
 
-		protected HerokuServiceClient _herokuServiceClient;
+		protected readonly HerokuServiceClient _herokuServiceClient;
 
 		protected ResourceClient(HerokuServiceClient herokuServiceClient, string path)
 		{

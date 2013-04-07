@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Heroku.Model
+﻿namespace Heroku.Model
 {
 	public class Collaborator : IdentifiableResourceBase
 	{

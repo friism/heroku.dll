@@ -2,8 +2,7 @@
 
 namespace Heroku.Model
 {
-	public class Application
-		: UpdatableResourceBase
+	public class Application : UpdatableResourceBase
 	{
 		public string BuildpackProvidedDescription { get; set; }
 		public string GitUrl { get; set; }

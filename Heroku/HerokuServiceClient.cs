@@ -9,7 +9,7 @@ namespace Heroku
 
 		static HerokuServiceClient()
 		{
-			_userAgent = string.Format("heroku.dll {0}",
+			_userAgent = string.Format("Heroku.dll {0}",
 				typeof(HerokuServiceClient).Assembly.GetName().Version);
 		}
 

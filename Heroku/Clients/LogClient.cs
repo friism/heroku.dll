@@ -1,5 +1,4 @@
 ﻿using Heroku.Model;
-using System.Collections.Generic;
 
 namespace Heroku.Clients
 {

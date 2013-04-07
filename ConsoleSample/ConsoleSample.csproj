@@ -91,7 +91,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HerokuDotNet\Heroku.csproj">
+    <ProjectReference Include="..\Heroku\Heroku.csproj">
       <Project>{cc814044-1b02-4e9d-aff2-b9bd4bc0da61}</Project>
       <Name>Heroku</Name>
     </ProjectReference>
