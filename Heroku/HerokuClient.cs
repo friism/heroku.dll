@@ -1,4 +1,4 @@
-﻿using Heroku.Clients;
+﻿using Heroku.Client;
 
 namespace Heroku
 {

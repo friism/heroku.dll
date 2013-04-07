@@ -1,7 +1,7 @@
 ﻿using Heroku.Model;
 using System.Collections.Generic;
 
-namespace Heroku.Clients
+namespace Heroku.Client
 {
 	public class FormationClient : ResourceClient<Formation>
 	{

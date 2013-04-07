@@ -1,6 +1,6 @@
 ﻿using Heroku.Model;
 
-namespace Heroku.Clients
+namespace Heroku.Client
 {
 	public class AccountClient : ResourceClient<Account>
 	{
