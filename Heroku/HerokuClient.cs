@@ -4,7 +4,7 @@ namespace Heroku
 {
 	public class HerokuClient
 	{
-		private HerokuServiceClient _client;
+		private readonly HerokuServiceClient _client;
 
 		// TODO: have a way to initialize with application context
 		public HerokuClient()
