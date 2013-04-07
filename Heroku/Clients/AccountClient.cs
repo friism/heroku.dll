@@ -4,6 +4,7 @@ namespace Heroku.Clients
 {
 	public class AccountClient : ResourceClient<Account>
 	{
+		//TODO: implement update
 		public AccountClient(HerokuServiceClient herokuServiceClient)
 			: base(herokuServiceClient)
 		{
