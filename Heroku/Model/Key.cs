@@ -6,7 +6,7 @@
 		public string FingerPrint { get; set; }
 		public string PublicKey { get; set; }
 
-		public class CreateRequest : ICreateRequest
+		public class CreateRequest : ICreateRequest<Key>
 		{
 			public string PublicKey { get; set; }
 		}

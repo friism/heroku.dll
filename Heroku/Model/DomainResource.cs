@@ -14,7 +14,7 @@ namespace Heroku.Model
 			public string Name { get; set; }
 		}
 
-		public class CreateRequest : ICreateRequest
+		public class CreateRequest : ICreateRequest<DomainResource>
 		{
 			public string Domain { get; set; }
 		}

@@ -17,6 +17,16 @@ namespace Heroku
 			get { return new AccountClient(_client); }
 		}
 
+		public AddonPlanClient AddonPlans
+		{
+			get { return new AddonPlanClient(_client); }
+		}
+
+		public AddonClient Addons
+		{
+			get { return new AddonClient(_client); }
+		}
+
 		public ApplicationClient Applications
 		{
 			get { return new ApplicationClient(_client); }

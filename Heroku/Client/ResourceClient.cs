@@ -21,7 +21,7 @@ namespace Heroku.Client
 		{
 		}
 
-		protected TResource Create(ICreateRequest createRequest = null, Guid? applicationId = null)
+		protected TResource Create(ICreateRequest<TResource> createRequest = null, Guid? applicationId = null)
 		{
 			return _herokuServiceClient.Post<TResource>(
 				FormatPath(applicationId), createRequest);
@@ -45,7 +45,7 @@ namespace Heroku.Client
 				FormatPath(applicationId));
 		}
 
-		protected void Update(Guid id, IUpdateRequest updateRequest, Guid? applicationId = null)
+		protected void Update(Guid id, IUpdateRequest<TResource> updateRequest, Guid? applicationId = null)
 		{
 			_herokuServiceClient.Put<TResource>(
 				string.Format("{0}/{1}", FormatPath(applicationId), id), updateRequest);

@@ -1,6 +1,6 @@
 ﻿namespace Heroku.Model
 {
-	public interface ICreateRequest
+	public interface ICreateRequest<TResource>
 	{
 	}
 }

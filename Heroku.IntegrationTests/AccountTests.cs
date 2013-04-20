@@ -9,8 +9,7 @@ namespace Heroku.IntegrationTests
 		public void CanGetAccount()
 		{
 			var account = _client.Account.Get();
-			Assert.NotEqual(account.Id, default(Guid));
-			Assert.NotEqual(account.UpdatedAt, default(DateTime));
+			TestResource(account);
 			Assert.NotEqual(account.LastLogin, default(DateTime));
 			Assert.False(string.IsNullOrEmpty(account.Email));
 		}

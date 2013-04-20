@@ -5,7 +5,7 @@ namespace Heroku.Client
 	public class DynoClient : ApplicationResourceClient<Dyno>
 	{
 		public DynoClient(HerokuServiceClient herokuServiceClient)
-			: base(herokuServiceClient, "apps/{0}/dynos")
+			: base(herokuServiceClient, "dynos")
 		{
 		}
 	}

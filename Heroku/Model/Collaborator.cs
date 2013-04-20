@@ -4,7 +4,7 @@
 	{
 		public User User { get; set; }
 
-		public class CreateRequest : ICreateRequest
+		public class CreateRequest : ICreateRequest<Collaborator>
 		{
 			public User User { get; set; }
 		}

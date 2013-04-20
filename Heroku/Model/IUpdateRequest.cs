@@ -1,6 +1,6 @@
 ﻿namespace Heroku.Model
 {
-	public interface IUpdateRequest
+	public interface IUpdateRequest<TResource>
 	{
 	}
 }

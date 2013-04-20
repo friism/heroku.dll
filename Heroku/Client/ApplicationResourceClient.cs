@@ -8,11 +8,11 @@ namespace Heroku.Client
 		where TResource : ResourceBase
 	{
 		protected ApplicationResourceClient(HerokuServiceClient herokuServiceClient, string path)
-			: base(herokuServiceClient, path)
+			: base(herokuServiceClient, "apps/{0}/" + path)
 		{
 		}
 
-		public TResource Create(Guid applicationId, ICreateRequest createRequest)
+		public TResource Create(Guid applicationId, ICreateRequest<TResource> createRequest)
 		{
 			return base.Create(createRequest, applicationId);
 		}
