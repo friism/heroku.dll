@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Client\ApplicationClient.cs" />
     <Compile Include="Client\AccountClient.cs" />
+    <Compile Include="Client\ApplicationResourceClient.cs" />
     <Compile Include="Client\CollaboratorClient.cs" />
     <Compile Include="Client\ConfigurationVariableClient.cs" />
     <Compile Include="Client\LogClient.cs" />

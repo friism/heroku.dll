@@ -1,4 +1,5 @@
 ﻿using Heroku.Model;
+using System;
 using System.Collections.Generic;
 
 namespace Heroku.Client
@@ -11,15 +12,15 @@ namespace Heroku.Client
 			: base(herokuServiceClient, _pathFormat)
 		{
 		}
-		public new IEnumerable<Formation> GetAll(string applicationIdentifier)
+		public IEnumerable<Formation> GetAll(Guid applicationId)
 		{
-			return base.GetAll(applicationIdentifier);
+			return base.GetAll(applicationId);
 		}
 
-		public void Update(string applicationIdentifier, string processType, Formation.UpdateRequest updateRequest)
+		public void Update(Guid applicationId, string processType, Formation.UpdateRequest updateRequest)
 		{
 			_herokuServiceClient.Put<IEnumerable<Formation>>(
-				string.Format("{0}/{1}", FormatPath(applicationIdentifier), processType), updateRequest);
+				string.Format("{0}/{1}", FormatPath(applicationId), processType), updateRequest);
 		}
 	}
 }

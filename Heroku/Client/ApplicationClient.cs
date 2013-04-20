@@ -1,4 +1,5 @@
 ﻿using Heroku.Model;
+using System;
 using System.Collections.Generic;
 
 namespace Heroku.Client
@@ -15,14 +16,14 @@ namespace Heroku.Client
 			return base.Create(createRequest);
 		}
 
-		public void Delete(string identifier)
+		public void Delete(Guid id)
 		{
-			base.Delete(identifier);
+			base.Delete(id);
 		}
 
-		public Application Get(string identifier)
+		public Application Get(Guid id)
 		{
-			return base.Get(identifier);
+			return base.Get(id);
 		}
 
 		public IEnumerable<Application> GetAll()
@@ -30,9 +31,9 @@ namespace Heroku.Client
 			return base.GetAll();
 		}
 
-		public void Update(string identifier, Application.UpdateRequest updateRequest)
+		public void Update(Guid id, Application.UpdateRequest updateRequest)
 		{
-			base.Update(identifier, updateRequest);
+			base.Update(id, updateRequest);
 		}
 	}
 }

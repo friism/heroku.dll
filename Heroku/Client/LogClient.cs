@@ -1,4 +1,5 @@
 ﻿using Heroku.Model;
+using System;
 
 namespace Heroku.Client
 {
@@ -9,9 +10,9 @@ namespace Heroku.Client
 		{
 		}
 
-		public Log Create(string applicationIdentifier)
+		public Log Create(Guid applicationId)
 		{
-			return base.Create(applicationIdentifier: applicationIdentifier);
+			return base.Create(applicationId: applicationId);
 		}
 	}
 }

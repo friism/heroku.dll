@@ -1,4 +1,5 @@
 ﻿using Heroku.Model;
+using System;
 using System.Collections.Generic;
 
 namespace Heroku.Client
@@ -11,17 +12,17 @@ namespace Heroku.Client
 		{
 		}
 
-		public new IDictionary<string, string> GetAll(string applicationIdentifier)
+		public IDictionary<string, string> GetAll(Guid applicationId)
 		{
 			return _herokuServiceClient.Get<IDictionary<string, string>>(
-				FormatPath(applicationIdentifier));
+				FormatPath(applicationId));
 		}
 
-		public IDictionary<string, string> CreateOrUpdate(string applicationIdentifier,
+		public IDictionary<string, string> CreateOrUpdate(Guid applicationId,
 			IDictionary<string, string> configVariables)
 		{
 			return _herokuServiceClient.Put<IDictionary<string, string>>(
-				FormatPath(applicationIdentifier), configVariables);
+				FormatPath(applicationId), configVariables);
 		}
 	}
 }

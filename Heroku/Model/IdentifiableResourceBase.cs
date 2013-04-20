@@ -1,7 +1,9 @@
-﻿namespace Heroku.Model
+﻿using System;
+
+namespace Heroku.Model
 {
 	public abstract class IdentifiableResourceBase : ResourceBase
 	{
-		public string Id { get; set; }
+		public Guid Id { get; set; }
 	}
 }

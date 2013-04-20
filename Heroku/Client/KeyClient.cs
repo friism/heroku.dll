@@ -1,4 +1,5 @@
 ﻿using Heroku.Model;
+using System;
 using System.Collections.Generic;
 
 namespace Heroku.Client
@@ -17,9 +18,9 @@ namespace Heroku.Client
 			return base.Create(new Key.CreateRequest { PublicKey = publicKey });
 		}
 
-		public void Delete(string keyIdentifier)
+		public void Delete(Guid keyId)
 		{
-			base.Delete(keyIdentifier);
+			base.Delete(keyId);
 		}
 
 		public Key Get(string keyIdentifier)
