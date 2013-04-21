@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Client\AddonPlanClient.cs" />
     <Compile Include="Client\AddonClient.cs" />
+    <Compile Include="Client\ReleaseClient.cs" />
     <Compile Include="Model\Addon.cs" />
     <Compile Include="Model\AddonPlan.cs" />
     <Compile Include="Client\ApplicationClient.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Client\FormationClient.cs" />
     <Compile Include="Client\DynoClient.cs" />
     <Compile Include="Client\DomainClient.cs" />
+    <Compile Include="Model\Release.cs" />
     <Compile Include="Model\NamedResourceBase.cs" />
     <Compile Include="Model\Log.cs" />
     <Compile Include="Model\ResourceBase.cs" />

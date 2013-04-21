@@ -23,9 +23,9 @@ namespace Heroku.Client
 			base.Delete(keyId);
 		}
 
-		public Key Get(string keyIdentifier)
+		public Key Get(Guid id)
 		{
-			return _herokuServiceClient.Get<Key>(string.Format("{0}/{1}", _path, keyIdentifier));
+			return _herokuServiceClient.Get<Key>(string.Format("{0}/{1}", _path, id));
 		}
 
 		public IEnumerable<Key> GetAll()

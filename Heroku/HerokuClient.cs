@@ -66,5 +66,10 @@ namespace Heroku
 		{
 			get { return new LogClient(_client); }
 		}
+
+		public ReleaseClient Releases
+		{
+			get { return new ReleaseClient(_client); }
+		}
 	}
 }
