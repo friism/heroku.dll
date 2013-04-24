@@ -1,5 +1,8 @@
-﻿using ServiceStack.ServiceClient.Web;
+﻿using Heroku.Model;
+using ServiceStack.ServiceClient.Web;
 using ServiceStack.Text;
+using System;
+using System.Net;
 
 namespace Heroku
 {
@@ -19,6 +22,13 @@ namespace Heroku
 			JsConfig.PropertyConvention = JsonPropertyConvention.Lenient;
 			JsConfig.EmitLowercaseUnderscoreNames = true;
 			LocalHttpWebRequestFilter = request => request.UserAgent = _userAgent;
+		}
+
+		protected override bool HandleResponseException<TResponse>(Exception exception, object request, string requestUri, Func<WebRequest> createWebRequest, Func<WebRequest, WebResponse> getResponse, out TResponse response)
+		{
+			ThrowWebServiceException<ApiError>(exception, requestUri);
+
+			return base.HandleResponseException<TResponse>(exception, request, requestUri, createWebRequest, getResponse, out response);
 		}
 
 		public override string Accept

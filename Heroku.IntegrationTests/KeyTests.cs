@@ -1,4 +1,5 @@
-﻿using ServiceStack.ServiceClient.Web;
+﻿using Heroku.Model;
+using ServiceStack.ServiceClient.Web;
 using Xunit;
 
 namespace Heroku.IntegrationTests
@@ -20,7 +21,13 @@ namespace Heroku.IntegrationTests
 			TestResource(key);
 
 			Assert.DoesNotThrow(() => _client.Keys.Delete(key.Id));
-			Assert.Throws(typeof(WebServiceException), () => _client.Keys.Get(key.Id));
+
+			var exception = Assert.Throws<WebServiceException>(() => _client.Keys.Get(key.Id));
+			Assert.Equal(404, exception.StatusCode);
+			Assert.IsType<ApiError>(exception.ResponseDto);
+			var error = exception.ResponseDto as ApiError;
+			Assert.Equal("key_not_found", error.Id);
+			Assert.Equal("Key not found.", error.Message);
 		}
 	}
 }

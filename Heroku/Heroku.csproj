@@ -74,6 +74,7 @@
     <Compile Include="Client\FormationClient.cs" />
     <Compile Include="Client\DynoClient.cs" />
     <Compile Include="Client\DomainClient.cs" />
+    <Compile Include="Model\ApiError.cs" />
     <Compile Include="Model\Release.cs" />
     <Compile Include="Model\NamedResourceBase.cs" />
     <Compile Include="Model\Log.cs" />
