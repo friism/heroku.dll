@@ -7,7 +7,7 @@ namespace Heroku.IntegrationTests
 	public class AddonPlanTests : TestClass
 	{
 		[Fact(Skip="Not working")]
-		public void CanGetAddPlans()
+		public void CanGetAddOnPlans()
 		{
 			var plans = _client.AddonPlans.GetAll();
 			Assert.NotEmpty(plans);
