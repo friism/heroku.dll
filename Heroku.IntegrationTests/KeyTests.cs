@@ -12,7 +12,7 @@ namespace Heroku.IntegrationTests
 		public void TestKeys()
 		{
 			var key = _client.Keys.Create(_key);
-			
+
 			TestResource(key);
 			Assert.Equal(_key, key.PublicKey);
 
@@ -24,10 +24,12 @@ namespace Heroku.IntegrationTests
 
 			var exception = Assert.Throws<ApiException>(() => _client.Keys.Get(key.Id));
 			Assert.Equal("Key not found.", exception.Message);
+
 			Assert.IsType<WebServiceException>(exception.InnerException);
 			var webServiceException = exception.InnerException as WebServiceException;
 			Assert.Equal(404, webServiceException.StatusCode);
 			Assert.IsType<ApiError>(webServiceException.ResponseDto);
+
 			var error = webServiceException.ResponseDto as ApiError;
 			Assert.Equal("key_not_found", error.Id);
 		}
