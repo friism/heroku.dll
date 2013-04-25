@@ -46,7 +46,9 @@ namespace Heroku.IntegrationTests
 			Assert.Equal(newApplicationName, applicationFetchedById.Name);
 
 			_client.Applications.Delete(createdApplication.Id);
-			Assert.Throws(typeof(WebServiceException), () => _client.Applications.Get(createdApplication.Id));
+
+			var exception = Assert.Throws(typeof(ApiException), () => _client.Applications.Get(createdApplication.Id));
+			Assert.Equal("App not found.", exception.Message);
 		}
 
 		private string GetValidApplicationName()
