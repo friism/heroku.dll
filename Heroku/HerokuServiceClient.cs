@@ -31,6 +31,19 @@ namespace Heroku
 			return base.HandleResponseException<TResponse>(exception, request, requestUri, createWebRequest, getResponse, out response);
 		}
 
+		public override TResponse Send<TResponse>(string httpMethod, string relativeOrAbsoluteUrl, object request)
+		{
+			try
+			{
+				return base.Send<TResponse>(httpMethod, relativeOrAbsoluteUrl, request);
+			}
+			catch (WebServiceException exception)
+			{
+				var error = exception.ResponseDto as ApiError;
+				throw new ApiException(error.Message, exception);
+			}
+		}
+
 		public override string Accept
 		{
 			get

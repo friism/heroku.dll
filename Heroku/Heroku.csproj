@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiException.cs" />
     <Compile Include="Client\AddonPlanClient.cs" />
     <Compile Include="Client\AddonClient.cs" />
     <Compile Include="Client\ReleaseClient.cs" />

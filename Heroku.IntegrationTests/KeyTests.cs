@@ -22,12 +22,14 @@ namespace Heroku.IntegrationTests
 
 			Assert.DoesNotThrow(() => _client.Keys.Delete(key.Id));
 
-			var exception = Assert.Throws<WebServiceException>(() => _client.Keys.Get(key.Id));
-			Assert.Equal(404, exception.StatusCode);
-			Assert.IsType<ApiError>(exception.ResponseDto);
-			var error = exception.ResponseDto as ApiError;
+			var exception = Assert.Throws<ApiException>(() => _client.Keys.Get(key.Id));
+			Assert.Equal("Key not found.", exception.Message);
+			Assert.IsType<WebServiceException>(exception.InnerException);
+			var webServiceException = exception.InnerException as WebServiceException;
+			Assert.Equal(404, webServiceException.StatusCode);
+			Assert.IsType<ApiError>(webServiceException.ResponseDto);
+			var error = webServiceException.ResponseDto as ApiError;
 			Assert.Equal("key_not_found", error.Id);
-			Assert.Equal("Key not found.", error.Message);
 		}
 	}
 }
