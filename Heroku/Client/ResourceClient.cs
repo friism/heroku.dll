@@ -47,7 +47,7 @@ namespace Heroku.Client
 
 		protected void Update(Guid id, IUpdateRequest<TResource> updateRequest, Guid? applicationId = null)
 		{
-			_herokuServiceClient.Put<TResource>(
+			_herokuServiceClient.Patch<TResource>(
 				string.Format("{0}/{1}", FormatPath(applicationId), id), updateRequest);
 		}
 

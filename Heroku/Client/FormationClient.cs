@@ -19,7 +19,7 @@ namespace Heroku.Client
 
 		public void Update(Guid applicationId, string processType, Formation.UpdateRequest updateRequest)
 		{
-			_herokuServiceClient.Put<IEnumerable<Formation>>(
+			_herokuServiceClient.Patch<IEnumerable<Formation>>(
 				string.Format("{0}/{1}", FormatPath(applicationId), processType), updateRequest);
 		}
 	}

@@ -21,7 +21,7 @@ namespace Heroku.Client
 		public IDictionary<string, string> CreateOrUpdate(Guid applicationId,
 			IDictionary<string, string> configVariables)
 		{
-			return _herokuServiceClient.Put<IDictionary<string, string>>(
+			return _herokuServiceClient.Patch<IDictionary<string, string>>(
 				FormatPath(applicationId), configVariables);
 		}
 	}
