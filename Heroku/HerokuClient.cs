@@ -2,74 +2,67 @@
 
 namespace Heroku
 {
+	// TODO: have a way to initialize with application context
 	public class HerokuClient
 	{
-		private readonly HerokuServiceClient _client;
-
-		// TODO: have a way to initialize with application context
-		public HerokuClient()
-		{
-			_client = ClientHelper.GetClient();
-		}
-
 		public AccountClient Account
 		{
-			get { return new AccountClient(_client); }
+			get { return new AccountClient(); }
 		}
 
 		public AddonPlanClient AddonPlans
 		{
-			get { return new AddonPlanClient(_client); }
+			get { return new AddonPlanClient(); }
 		}
 
 		public AddonClient Addons
 		{
-			get { return new AddonClient(_client); }
+			get { return new AddonClient(); }
 		}
 
 		public ApplicationClient Applications
 		{
-			get { return new ApplicationClient(_client); }
+			get { return new ApplicationClient(); }
 		}
 
 		public CollaboratorClient Collaborators
 		{
-			get { return new CollaboratorClient(_client); }
+			get { return new CollaboratorClient(); }
 		}
 
 		public ConfigurationVariableClient ConfigurationVariables
 		{
-			get { return new ConfigurationVariableClient(_client); }
+			get { return new ConfigurationVariableClient(); }
 		}
 
 		public DomainClient Domains
 		{
-			get { return new DomainClient(_client); }
+			get { return new DomainClient(); }
 		}
 
 		public DynoClient Dynos
 		{
-			get { return new DynoClient(_client); }
+			get { return new DynoClient(); }
 		}
 
 		public FormationClient Formation
 		{
-			get { return new FormationClient(_client); }
+			get { return new FormationClient(); }
 		}
 
 		public KeyClient Keys
 		{
-			get { return new KeyClient(_client); }
+			get { return new KeyClient(); }
 		}
 
 		public LogClient Logs
 		{
-			get { return new LogClient(_client); }
+			get { return new LogClient(); }
 		}
 
 		public ReleaseClient Releases
 		{
-			get { return new ReleaseClient(_client); }
+			get { return new ReleaseClient(); }
 		}
 	}
 }

@@ -1,5 +1,4 @@
-﻿using Heroku.Model;
-using ServiceStack.ServiceClient.Web;
+﻿using System.Net;
 using Xunit;
 
 namespace Heroku.IntegrationTests
@@ -25,13 +24,9 @@ namespace Heroku.IntegrationTests
 			var exception = Assert.Throws<ApiException>(() => _client.Keys.Get(key.Id));
 			Assert.Equal("Key not found.", exception.Message);
 
-			Assert.IsType<WebServiceException>(exception.InnerException);
-			var webServiceException = exception.InnerException as WebServiceException;
-			Assert.Equal(404, webServiceException.StatusCode);
-			Assert.IsType<ApiError>(webServiceException.ResponseDto);
-
-			var error = webServiceException.ResponseDto as ApiError;
-			Assert.Equal("key_not_found", error.Id);
+			Assert.IsType<WebException>(exception.InnerException);
+			var webException = exception.InnerException as WebException;
+			Assert.Equal("key_not_found", exception.ApiError.Id);
 		}
 	}
 }

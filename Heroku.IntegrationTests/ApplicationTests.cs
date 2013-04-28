@@ -1,5 +1,4 @@
 ﻿using Heroku.Model;
-using ServiceStack.ServiceClient.Web;
 using System;
 using Xunit;
 
@@ -51,7 +50,7 @@ namespace Heroku.IntegrationTests
 			Assert.Equal("App not found.", exception.Message);
 		}
 
-		private string GetValidApplicationName()
+		public static string GetValidApplicationName()
 		{
 			return "a" + Guid.NewGuid().ToString().Replace("-", "").Substring(0, 28);
 		}

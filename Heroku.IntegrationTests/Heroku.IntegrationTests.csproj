@@ -63,6 +63,7 @@
     <Compile Include="AddonTests.cs" />
     <Compile Include="CollaboratorTests.cs" />
     <Compile Include="ConfigurationVariableTests.cs" />
+    <Compile Include="RangeTests.cs" />
     <Compile Include="ReleaseTests.cs" />
     <Compile Include="LogTests.cs" />
     <Compile Include="KeyTests.cs" />

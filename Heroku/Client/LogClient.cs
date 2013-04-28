@@ -5,8 +5,8 @@ namespace Heroku.Client
 {
 	public class LogClient : ResourceClient<Log>
 	{
-		public LogClient(HerokuServiceClient herokuServiceClient)
-			: base(herokuServiceClient, "apps/{0}/log-sessions")
+		public LogClient()
+			: base("apps/{0}/log-sessions")
 		{
 		}
 

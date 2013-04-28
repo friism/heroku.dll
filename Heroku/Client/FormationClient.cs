@@ -8,8 +8,8 @@ namespace Heroku.Client
 	{
 		private const string _pathFormat = "apps/{0}/formation";
 
-		public FormationClient(HerokuServiceClient herokuServiceClient)
-			: base(herokuServiceClient, _pathFormat)
+		public FormationClient()
+			: base(_pathFormat)
 		{
 		}
 		public IEnumerable<Formation> GetAll(Guid applicationId)
@@ -19,7 +19,7 @@ namespace Heroku.Client
 
 		public void Update(Guid applicationId, string processType, Formation.UpdateRequest updateRequest)
 		{
-			_herokuServiceClient.Patch<IEnumerable<Formation>>(
+			Patch<IEnumerable<Formation>>(
 				string.Format("{0}/{1}", FormatPath(applicationId), processType), updateRequest);
 		}
 	}

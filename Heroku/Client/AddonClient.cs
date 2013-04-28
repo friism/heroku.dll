@@ -6,8 +6,8 @@ namespace Heroku.Client
 {
 	public class AddonPlanClient : ResourceClient<AddonPlan>
 	{
-		public AddonPlanClient(HerokuServiceClient herokuServiceClient)
-			: base(herokuServiceClient, "addon-plans")
+		public AddonPlanClient()
+			: base("addon-plans")
 		{
 		}
 

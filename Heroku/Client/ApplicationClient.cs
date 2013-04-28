@@ -6,8 +6,8 @@ namespace Heroku.Client
 {
 	public class ApplicationClient : ResourceClient<Application>
 	{
-		public ApplicationClient(HerokuServiceClient herokuServiceClient)
-			: base(herokuServiceClient, "apps")
+		public ApplicationClient()
+			: base("apps")
 		{
 		}
 

@@ -7,8 +7,8 @@ namespace Heroku.Client
 	public abstract class ApplicationResourceClient<TResource> : ResourceClient<TResource>
 		where TResource : ResourceBase
 	{
-		protected ApplicationResourceClient(HerokuServiceClient herokuServiceClient, string path)
-			: base(herokuServiceClient, "apps/{0}/" + path)
+		protected ApplicationResourceClient(string path)
+			: base("apps/{0}/" + path)
 		{
 		}
 

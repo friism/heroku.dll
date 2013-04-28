@@ -4,8 +4,8 @@ namespace Heroku.Client
 {
 	public class CollaboratorClient : ApplicationResourceClient<Collaborator>
 	{
-		public CollaboratorClient(HerokuServiceClient herokuServiceClient)
-			: base(herokuServiceClient, "collaborators")
+		public CollaboratorClient()
+			: base("collaborators")
 		{
 		}
 	}

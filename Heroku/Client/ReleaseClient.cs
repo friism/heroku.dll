@@ -6,8 +6,8 @@ namespace Heroku.Client
 {
 	public class ReleaseClient : ResourceClient<Release>
 	{
-		public ReleaseClient(HerokuServiceClient herokuServiceClient)
-			: base(herokuServiceClient, "apps/{0}/releases")
+		public ReleaseClient()
+			: base("apps/{0}/releases")
 		{
 		}
 

@@ -8,8 +8,8 @@ namespace Heroku.Client
 	{
 		private const string _path = "account/keys";
 
-		public KeyClient(HerokuServiceClient herokuServiceClient)
-			: base(herokuServiceClient, _path)
+		public KeyClient()
+			: base(_path)
 		{
 		}
 
@@ -25,12 +25,12 @@ namespace Heroku.Client
 
 		public Key Get(Guid id)
 		{
-			return _herokuServiceClient.Get<Key>(string.Format("{0}/{1}", _path, id));
+			return Get<Key>(string.Format("{0}/{1}", _path, id));
 		}
 
 		public IEnumerable<Key> GetAll()
 		{
-			return _herokuServiceClient.Get<IEnumerable<Key>>(_path);
+			return Get<IEnumerable<Key>>(_path);
 		}
 	}
 }
