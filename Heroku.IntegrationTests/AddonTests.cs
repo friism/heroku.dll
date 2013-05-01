@@ -1,6 +1,5 @@
 ﻿using Heroku.IntegrationTests.Helpers;
 using Heroku.Model;
-using ServiceStack.ServiceClient.Web;
 using Xunit;
 
 namespace Heroku.IntegrationTests
@@ -9,7 +8,7 @@ namespace Heroku.IntegrationTests
 	{
 		private const string _planName = "heroku-postgresql:dev";
 
-		[Fact(Skip="Not working")]
+		[Fact]
 		public void TestAddons()
 		{
 			using (var wrapper = new ApplicationWrapper(_client))
@@ -22,7 +21,7 @@ namespace Heroku.IntegrationTests
 
 				_client.Addons.Delete(application.Id, addon.Id);
 
-				Assert.Throws(typeof(WebServiceException),
+				Assert.Throws(typeof(ApiException),
 					() => _client.Addons.Get(application.Id, addon.Id));
 			}
 		}
