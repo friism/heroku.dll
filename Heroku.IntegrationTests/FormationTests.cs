@@ -6,7 +6,7 @@ namespace Heroku.IntegrationTests
 	public class FormationTests : TestClass
 	{
 		[Fact]
-		public void TestFormation()
+		public void TestFormationOnNewApp()
 		{
 			using (var wrapper = new ApplicationWrapper(_client))
 			{
