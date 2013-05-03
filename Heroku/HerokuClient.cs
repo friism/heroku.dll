@@ -60,6 +60,11 @@ namespace Heroku
 			get { return new LogSessionClient(); }
 		}
 
+		public RegionClient Regions
+		{
+			get { return new RegionClient(); }
+		}
+
 		public ReleaseClient Releases
 		{
 			get { return new ReleaseClient(); }

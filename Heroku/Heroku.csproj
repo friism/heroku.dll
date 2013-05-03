@@ -63,6 +63,7 @@
     <Compile Include="ApiException.cs" />
     <Compile Include="Client\AddonPlanClient.cs" />
     <Compile Include="Client\AddonClient.cs" />
+    <Compile Include="Client\RegionClient.cs" />
     <Compile Include="Client\ExceptionHelper.cs" />
     <Compile Include="Client\ReleaseClient.cs" />
     <Compile Include="HttpWebRequestHelper.cs" />
