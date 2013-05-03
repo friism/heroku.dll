@@ -55,7 +55,7 @@ namespace Heroku
 			get { return new KeyClient(); }
 		}
 
-		public LogSessionClient Logs
+		public LogSessionClient LogSessions
 		{
 			get { return new LogSessionClient(); }
 		}

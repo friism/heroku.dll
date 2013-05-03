@@ -12,7 +12,7 @@ namespace Heroku.IntegrationTests
 			{
 				var application = wrapper.Application;
 
-				var logSession = _client.Logs.Create(application.Id);
+				var logSession = _client.LogSessions.Create(application.Id);
 
 				TestResource(logSession);
 				Assert.False(string.IsNullOrEmpty(logSession.LogplexUrl));
