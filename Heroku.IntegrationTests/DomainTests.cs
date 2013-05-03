@@ -6,7 +6,8 @@ namespace Heroku.IntegrationTests
 {
 	public class DomainTests : TestClass
 	{
-		private const string _domainName = "foo.example.com";
+		private const string _baseDomain = "example.com";
+		private readonly string _domainName = string.Format("foo.{0}", _baseDomain);
 
 		[Fact]
 		public void TestDomains()
@@ -23,7 +24,7 @@ namespace Heroku.IntegrationTests
 				TestResource(domain);
 
 				Assert.Equal(_domainName, domain.Domain);
-				Assert.Equal("example.com", domain.Base);
+				Assert.Equal(_baseDomain, domain.Base);
 
 				Assert.NotEmpty(_client.Domains.GetAll(application.Id));
 
