@@ -3,14 +3,14 @@ using System;
 
 namespace Heroku.Client
 {
-	public class LogClient : ResourceClient<Log>
+	public class LogSessionClient : ResourceClient<LogSession>
 	{
-		public LogClient()
+		public LogSessionClient()
 			: base("apps/{0}/log-sessions")
 		{
 		}
 
-		public Log Create(Guid applicationId)
+		public LogSession Create(Guid applicationId)
 		{
 			return base.Create(applicationId: applicationId);
 		}

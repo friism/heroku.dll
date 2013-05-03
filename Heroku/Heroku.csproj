@@ -73,7 +73,7 @@
     <Compile Include="Client\ApplicationResourceClient.cs" />
     <Compile Include="Client\CollaboratorClient.cs" />
     <Compile Include="Client\ConfigurationVariableClient.cs" />
-    <Compile Include="Client\LogClient.cs" />
+    <Compile Include="Client\LogSessionClient.cs" />
     <Compile Include="Client\KeyClient.cs" />
     <Compile Include="Client\FormationClient.cs" />
     <Compile Include="Client\DynoClient.cs" />
@@ -82,7 +82,7 @@
     <Compile Include="Model\IdentifiableResourceBase.cs" />
     <Compile Include="Model\Release.cs" />
     <Compile Include="Model\NamedResourceBase.cs" />
-    <Compile Include="Model\Log.cs" />
+    <Compile Include="Model\LogSession.cs" />
     <Compile Include="Model\ResourceBase.cs" />
     <Compile Include="Model\IUpdateRequest.cs" />
     <Compile Include="Model\Formation.cs" />

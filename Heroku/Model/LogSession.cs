@@ -1,6 +1,6 @@
 ﻿namespace Heroku.Model
 {
-	public class Log : ResourceBase
+	public class LogSession : ResourceBase
 	{
 		public string LogplexUrl { get; set; }
 	}
