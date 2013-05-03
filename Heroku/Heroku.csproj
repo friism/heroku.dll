@@ -80,6 +80,7 @@
     <Compile Include="Client\DomainClient.cs" />
     <Compile Include="Model\ApiError.cs" />
     <Compile Include="Model\IdentifiableResourceBase.cs" />
+    <Compile Include="Model\Region.cs" />
     <Compile Include="Model\Release.cs" />
     <Compile Include="Model\NamedResourceBase.cs" />
     <Compile Include="Model\LogSession.cs" />
