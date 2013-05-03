@@ -2,7 +2,7 @@
 
 namespace Heroku.Model
 {
-	public class Account : UpdatableResourceBase
+	public class Account : IdentifiableResourceBase
 	{
 		public bool AllowTracking { get; set; }
 		public bool Beta { get; set; }

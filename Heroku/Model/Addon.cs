@@ -2,7 +2,7 @@
 
 namespace Heroku.Model
 {
-	public class Addon : UpdatableResourceBase
+	public class Addon : IdentifiableResourceBase
 	{
 		public AddonPlanResource AddonPlan { get; set; }
 		public IDictionary<string, string> Attachments { get; set; }
