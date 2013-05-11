@@ -20,7 +20,7 @@ namespace Heroku.IntegrationTests
 				var release = _client.Releases.Get(application.Id, initialReleases.First().Id);
 				TestResource(release);
 				Assert.False(string.IsNullOrEmpty(release.Description));
-				Assert.False(string.IsNullOrEmpty(release.Name));
+				Assert.NotEqual(default(int), release.Version);
 				Assert.NotNull(release.User);
 				Assert.False(string.IsNullOrEmpty(release.User.Email));
 				Assert.NotEqual(default(Guid), release.User.Id);

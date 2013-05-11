@@ -1,6 +1,6 @@
 ﻿namespace Heroku.Model
 {
-	public class Key : IdentifiableResourceBase
+	public class Key : ResourceBase
 	{
 		public string Email { get; set; }
 		public string FingerPrint { get; set; }

@@ -16,13 +16,8 @@ namespace Heroku.IntegrationTests
 		protected void TestResource(ResourceBase @object)
 		{
 			Assert.NotEqual(default(DateTime), @object.CreatedAt);
-			Assert.NotEqual(default(DateTime), @object.UpdatedAt);
-		}
-
-		protected void TestResource(IdentifiableResourceBase @object)
-		{
-			TestResource((ResourceBase)@object);
 			Assert.NotEqual(default(Guid), @object.Id);
+			Assert.NotEqual(default(DateTime), @object.UpdatedAt);
 		}
 
 		protected void TestResource(NamedResourceBase @object)

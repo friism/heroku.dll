@@ -21,9 +21,9 @@ namespace Heroku.IntegrationTests
 					.AsParallel()
 					.ForAll(x =>
 					_client.Domains.Create(application.Id,
-					new DomainResource.CreateRequest
+					new Domain.CreateRequest
 					{
-						Domain = string.Format("{0}.com", Guid.NewGuid()),
+						Hostname = string.Format("{0}.com", Guid.NewGuid()),
 					}));
 
 				var domains = _client.Domains.GetAll(application.Id).ToList();
